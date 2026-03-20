@@ -1,9 +1,10 @@
 {
   "name": "smart-error-copy",
   "displayName": "Smart Error Copy",
-  "publisher": "suryaDharmakrishnan",
+  "publisher": "surya-Dharmakrishnan",
   "description": "Copy full error context (message, file, line, stack trace) with one command.",
   "version": "0.0.1",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/wolfofweb/smart-error-copy.git"

@@ -6,15 +6,15 @@ function findBestErrorIndex(lines: string[]): number {
     const l = line.toLowerCase();
 
     // 🥇 Highest priority
-    if (l.includes("failed to compile")) return 1;
-    if (l.includes("syntax error")) return 1;
+    if (l.includes("failed to compile")) { return 1; }
+    if (l.includes("syntax error")) { return 1; }
 
     // 🥈 Runtime errors
-    if (l.includes("typeerror")) return 2;
-    if (l.includes("referenceerror")) return 2;
+    if (l.includes("typeerror")) { return 2; }
+    if (l.includes("referenceerror")) { return 2; }
 
     // 🥉 Generic
-    if (l.includes("error:")) return 3;
+    if (l.includes("error:")) { return 3; }
 
     return 999;
   };
@@ -25,7 +25,7 @@ function findBestErrorIndex(lines: string[]): number {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    if (line.trim().startsWith("at ")) continue;
+    if (line.trim().startsWith("at ")) { continue; }
 
     const priority = getPriority(line);
 
@@ -108,8 +108,8 @@ function extractRelevantError(text: string): string {
   for (let i = errorIndex; i < block.length; i++) {
     const line = block[i].trim();
 
-    if (line.includes("{")) insideObject = true;
-    if (line.includes("}")) insideObject = false;
+    if (line.includes("{")) { insideObject = true; }
+    if (line.includes("}")) { insideObject = false; }
 
     if (
       i > errorIndex &&
