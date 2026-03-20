@@ -3,7 +3,7 @@
   "displayName": "Smart Error Copy",
   "publisher": "surya-Dharmakrishnan",
   "description": "Copy full error context (message, file, line, stack trace) with one command.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "icon.png",
   "repository": {
     "type": "git",
@@ -12,8 +12,15 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
-  "keywords": ["error", "debug", "terminal", "logs"],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "error",
+    "debug",
+    "terminal",
+    "logs"
+  ],
   "main": "./dist/extension.js",
   "activationEvents": [
     "onCommand:smart-error-copy.copyError",
